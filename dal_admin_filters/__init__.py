@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 from dal import autocomplete, forward
 from django import forms
+from django.conf import settings
 from django.contrib.admin.filters import SimpleListFilter
 from django.contrib.admin.utils import get_fields_from_path
 from django.forms.widgets import Media, MEDIA_TYPES, media_property
@@ -26,11 +27,8 @@ class AutocompleteFilter(SimpleListFilter):
         }
         js = (
             'admin/js/jquery.init.js',
-            'autocomplete_light/jquery.init.js',
+            f'autocomplete_light/autocomplete_light{"" if settings.DEBUG else ".min"}.js',
             'dal_admin_filters/js/forward-fix.js',
-            'dal_admin_filters/js/select2.full.min.js',
-            'autocomplete_light/autocomplete.init.js',
-            'autocomplete_light/forward.js',
             'autocomplete_light/select2.js',
             'dal_admin_filters/js/querystring.js',
         )
