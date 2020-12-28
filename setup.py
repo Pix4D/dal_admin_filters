@@ -20,7 +20,8 @@ setup(
     packages=['dal_admin_filters'],
     include_package_data=True,
     zip_safe=False,
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     license='MIT',
     keywords='django autocomplete admin filters',
     install_requires=[
@@ -32,7 +33,7 @@ setup(
     ],
     use_scm_version=True,
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
